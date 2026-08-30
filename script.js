@@ -24,22 +24,31 @@ function showPage(id) {
     document.getElementById(id).classList.add("active");
 }
 
+const polki = [
+    ["Я", " ", "Т", "Е", "Б", "Я"],
+    ["Л", "Ю", "Б", "Л", "Ю"]
+];
+
 function risovatFrazu() {
-    const gotovo = slova.slice(0, shag).map(function (s) { return s.bukva; });
-    const fraza = "Я ТЕБЯ ЛЮБЛЮ";
-    let i = 0;
-    let out = "";
-    for (const ch of fraza) {
-        if (ch === " ") {
-            out += "  ";
-        } else if (i < gotovo.length) {
-            out += gotovo[i];
-            i += 1;
-        } else {
-            out += "·";
-        }
-    }
-    document.getElementById("phrase").textContent = out;
+    const bukvy = slova.slice(0, shag).map(function (s) { return s.bukva; });
+    let n = 0;
+    ["shelf-1", "shelf-2"].forEach(function (id, ryad) {
+        const box = document.getElementById(id);
+        box.innerHTML = "";
+        polki[ryad].forEach(function (zn) {
+            const gnezdo = document.createElement("span");
+            if (zn === " ") {
+                gnezdo.className = "slot space";
+            } else {
+                gnezdo.className = "slot";
+                if (n < bukvy.length) {
+                    gnezdo.textContent = bukvy[n];
+                }
+                n += 1;
+            }
+            box.appendChild(gnezdo);
+        });
+    });
 }
 
 function pokazatKompliment() {
