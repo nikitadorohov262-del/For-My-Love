@@ -162,7 +162,7 @@ body:has(#page-4.out)::before {
     justify-content: center;
     gap: 10px;
     min-height: 48px;
-    margin: 0 0 7vh;
+    margin: 0;
 }
 
 .slot {
