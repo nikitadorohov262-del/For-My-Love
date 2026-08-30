@@ -224,3 +224,13 @@ body:has(#page-4.out)::before {
     #surprise:hover { animation: none; }
     .confetti { animation-duration: 0.01s; }
 }
+
+#shelf-1 {
+    margin-top: 2vh;
+    margin-bottom: 11vh;
+}
+
+#shelf-2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
