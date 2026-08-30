@@ -149,7 +149,7 @@ body:has(#page-4.out)::before {
 }
 
 #page-game {
-    padding: 15vh 8vw 8vh;
+    padding: 8vh 8vw 8vh;
     justify-content: space-between;
 }
 
